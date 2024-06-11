@@ -6,7 +6,7 @@ public class Print {
    }
    void print (String txt,int times){
     for(int i=0;i<times;i++){
-        System.out.println(txt‚);
+        System.out.println(txt);
     }
    }
     
