@@ -16,6 +16,7 @@ public class Main {
         // System.out.println(hero1.name);
         // System.out.println(hero1.age);
         System.out.println(hero2.toString());
+        System.out.println(hero1.toString());
 
     }
 }
