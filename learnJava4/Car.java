@@ -10,6 +10,9 @@ public class Car {
         this.setModel(model);
         this.setYear(year);
     }
+    // Car(Car x){
+    //     this.copy(x);
+    // }
     public String getMake(){
         return make;
     }
