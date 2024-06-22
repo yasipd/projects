@@ -1,3 +1,4 @@
+package learnJava6;
 public class Box<T> { //T is a placeholder for the type
     private T value;
     public void set(T value){
