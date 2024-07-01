@@ -1,4 +1,4 @@
-package learnJava8;
+package learnJava1;
 
 public class Dog {
     int size;
