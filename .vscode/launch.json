@@ -1,0 +1,269 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "Algorithm.BinarySearch",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "QuickFind",
+            "request": "launch",
+            "mainClass": "Algorithm.QuickFind",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "QuickUnion",
+            "request": "launch",
+            "mainClass": "Algorithm.QuickUnion",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "HashTable",
+            "request": "launch",
+            "mainClass": "Battleship.HashTable",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "SimpleStartUpTestDrive",
+            "request": "launch",
+            "mainClass": "Battleship.SimpleStartUpTestDrive",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "LambdaExpressions.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "SimpleBank.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(3)",
+            "request": "launch",
+            "mainClass": "SimpleBank2.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Dog",
+            "request": "launch",
+            "mainClass": "learnJava1.Dog",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(4)",
+            "request": "launch",
+            "mainClass": "learnJava1.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(5)",
+            "request": "launch",
+            "mainClass": "learnJava2.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Exercise1a",
+            "request": "launch",
+            "mainClass": "learnJava3.Exercise1a",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "PhraseOMatic",
+            "request": "launch",
+            "mainClass": "learnJava3.PhraseOMatic",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Shuffel",
+            "request": "launch",
+            "mainClass": "learnJava3.Shuffel",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "--module-path /Users/yasamanpandand/Desktop/javafx-sdk-21.0.3/lib --add-modules javafx.controls,javafx.fxml"
+        },
+    
+
+        {
+            "type": "java",
+            "name": "Main(6)",
+            "request": "launch",
+            "mainClass": "learnJava4.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "learnJava5.BubbleSort",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "GenericClassExample",
+            "request": "launch",
+            "mainClass": "learnJava6.GenericClassExample",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "GenericMethodExample",
+            "request": "launch",
+            "mainClass": "learnJava6.GenericMethodExample",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Main(7)",
+            "request": "launch",
+            "mainClass": "learnJava6.Main",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "WithGenerics",
+            "request": "launch",
+            "mainClass": "learnJava6.WithGenerics",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "WithOutGeneric",
+            "request": "launch",
+            "mainClass": "learnJava6.WithOutGeneric",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "AreaCalculator",
+            "request": "launch",
+            "mainClass": "learnJava7.AreaCalculator",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "AreaOfCircle",
+            "request": "launch",
+            "mainClass": "learnJava7.AreaOfCircle",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "ArrayListExample",
+            "request": "launch",
+            "mainClass": "learnJava7.ArrayListExample",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Calculate",
+            "request": "launch",
+            "mainClass": "learnJava7.Calculate",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "ControlFlow",
+            "request": "launch",
+            "mainClass": "learnJava7.ControlFlow",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "DataTypesExample",
+            "request": "launch",
+            "mainClass": "learnJava7.DataTypesExample",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "learnJava7.Factorial",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "celsiusToFahrenheit",
+            "request": "launch",
+            "mainClass": "learnJava7.celsiusToFahrenheit",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "isPrime",
+            "request": "launch",
+            "mainClass": "learnJava7.isPrime",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "primeFactors",
+            "request": "launch",
+            "mainClass": "learnJava7.primeFactors",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "printFibonacci",
+            "request": "launch",
+            "mainClass": "learnJava7.printFibonacci",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "BufferReaderExample",
+            "request": "launch",
+            "mainClass": "learnJava8.BufferReaderExample",
+            "projectName": "projects_7e5637e2"
+        },
+        {
+            "type": "java",
+            "name": "FileReaderExample",
+            "request": "launch",
+            "mainClass": "learnJava8.FileReaderExample",
+            "projectName": "projects_7e5637e2"
+        }
+    ]
+    
+}
