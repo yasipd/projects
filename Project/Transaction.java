@@ -1,4 +1,5 @@
-package SimpleBank1;
+package Project;
+
 
 public class Transaction implements Runnable {
     private Bank bank;

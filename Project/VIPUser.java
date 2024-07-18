@@ -1,4 +1,4 @@
-package SimpleBank1;
+package Project;
 
 public class VIPUser extends User {
     private static final double INTEREST_RATE = 0.05;
@@ -11,7 +11,7 @@ public class VIPUser extends User {
         System.out.println("As a VIP user, you have special benefits! Enjoy!");
     }
 
-    public double calculateInterest() {
-        return getAccount().getBalance() * INTEREST_RATE;
-    }
+//    public double calculateInterest() {
+//        return getAccount().getBalance() * INTEREST_RATE;
+//    }
 }

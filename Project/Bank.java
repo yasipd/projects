@@ -1,4 +1,4 @@
-package SimpleBank2;
+package Project;
 
 public class Bank extends AbstractBank {
 

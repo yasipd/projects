@@ -1,4 +1,4 @@
-package SimpleBank2;
+package Project;
 
 public class User {
     private String username;
@@ -23,3 +23,4 @@ public class User {
         return account;
     }
 }
+

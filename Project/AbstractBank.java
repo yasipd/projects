@@ -1,4 +1,5 @@
-package SimpleBank2;
+package Project;
+
 
 public abstract class AbstractBank implements Account {
     protected double balance;

@@ -1,4 +1,4 @@
-package SimpleBank2;
+package Project;
 
 import java.util.HashMap;
 import java.util.Map;
