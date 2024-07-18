@@ -1,4 +1,4 @@
-package SimpleBank2;
+package SimpleBank1;
 
 public class User {
     private String username;

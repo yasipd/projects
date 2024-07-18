@@ -1,4 +1,4 @@
-package SimpleBank2;
+package SimpleBank1;
 
 public class VIPUser extends User {
     private static final double INTEREST_RATE = 0.05;

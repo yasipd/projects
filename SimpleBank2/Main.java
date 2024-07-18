@@ -1,16 +1,16 @@
 package SimpleBank2;
 
-import java.util.Scanner;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Main {
     private static BankingSystem bankingSystem = new BankingSystem();
-    private static Scanner scanner = new Scanner(System.in);
+    private static User currentUser;
 
     public static void main(String[] args) {
         initializeUsers();
-        while (true) {
-            showMainMenu();
-        }
+        showLoginGUI();
     }
 
     private static void initializeUsers() {
@@ -18,87 +18,151 @@ public class Main {
         bankingSystem.addUser(new VIPUser("vipuser", "password2"));
     }
 
-    private static void showMainMenu() {
-        System.out.println("\n=== Banking System ===");
-        System.out.println("1. Login");
-        System.out.println("2. Exit");
-        System.out.print("Select an option: ");
-        int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+    private static void showLoginGUI() {
+        JFrame frame = new JFrame("Banking System - Login");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 200);
 
-        switch (choice) {
-            case 1:
-                login();
-                break;
-            case 2:
-                System.exit(0);
-                break;
-            default:
-                System.out.println("Invalid option. Please try again.");
-        }
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeLoginComponents(panel);
+
+        frame.setVisible(true);
     }
 
-    private static void login() {
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
+    private static void placeLoginComponents(JPanel panel) {
+        panel.setLayout(null);
 
-        User user = bankingSystem.getUser(username);
-        if (user != null && user.checkPassword(password)) {
-            showBankingInterface(user);
-        } else {
-            System.out.println("Login failed: Invalid username or password.");
-        }
+        JLabel userLabel = new JLabel("Username:");
+        userLabel.setBounds(10, 20, 80, 25);
+        panel.add(userLabel);
+
+        JTextField userText = new JTextField(20);
+        userText.setBounds(100, 20, 165, 25);
+        panel.add(userText);
+
+        JLabel passwordLabel = new JLabel("Password:");
+        passwordLabel.setBounds(10, 50, 80, 25);
+        panel.add(passwordLabel);
+
+        JPasswordField passwordText = new JPasswordField(20);
+        passwordText.setBounds(100, 50, 165, 25);
+        panel.add(passwordText);
+
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(10, 80, 80, 25);
+        panel.add(loginButton);
+
+        JLabel statusLabel = new JLabel("");
+        statusLabel.setBounds(10, 110, 300, 25);
+        panel.add(statusLabel);
+
+        loginButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = userText.getText();
+                String password = new String(passwordText.getPassword());
+                currentUser = bankingSystem.getUser(username);
+
+                if (currentUser != null && currentUser.checkPassword(password)) {
+                    statusLabel.setText("Login successful!");
+                    showBankingInterface();
+                    ((JFrame) SwingUtilities.getWindowAncestor(panel)).dispose();
+                } else {
+                    statusLabel.setText("Login failed: Invalid username or password.");
+                }
+            }
+        });
     }
 
-    private static void showBankingInterface(User user) {
-        while (true) {
-            System.out.println("\n=== Banking Interface ===");
-            System.out.println("1. Display Balance");
-            System.out.println("2. Deposit");
-            System.out.println("3. Withdraw");
-            if (user instanceof VIPUser) {
-                System.out.println("4. View Special Benefits");
-                System.out.println("5. Logout");
-            } else {
-                System.out.println("4. Logout");
-            }
-            System.out.print("Select an option: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+    private static void showBankingInterface() {
+        JFrame frame = new JFrame("Banking System - Main");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
 
-            switch (choice) {
-                case 1:
-                    user.getAccount().displayBalance();
-                    break;
-                case 2:
-                    System.out.print("Enter amount to deposit: ");
-                    double depositAmount = scanner.nextDouble();
-                    user.getAccount().deposit(depositAmount);
-                    break;
-                case 3:
-                    System.out.print("Enter amount to withdraw: ");
-                    double withdrawAmount = scanner.nextDouble();
-                    user.getAccount().withdraw(withdrawAmount);
-                    break;
-                case 4:
-                    if (user instanceof VIPUser) {
-                        ((VIPUser) user).getSpecialBenefits();
-                    } else {
-                        return;
-                    }
-                    break;
-                case 5:
-                    if (user instanceof VIPUser) {
-                        return;
-                    } else {
-                        System.out.println("Invalid option. Please try again.");
-                    }
-                    break;
-                default:
-                    System.out.println("Invalid option. Please try again.");
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeBankingComponents(panel);
+
+        frame.setVisible(true);
+    }
+
+    private static void placeBankingComponents(JPanel panel) {
+        panel.setLayout(null);
+
+        JButton displayBalanceButton = new JButton("Display Balance");
+        displayBalanceButton.setBounds(10, 20, 150, 25);
+        panel.add(displayBalanceButton);
+
+        JButton depositButton = new JButton("Deposit");
+        depositButton.setBounds(10, 50, 150, 25);
+        panel.add(depositButton);
+
+        JButton withdrawButton = new JButton("Withdraw");
+        withdrawButton.setBounds(10, 80, 150, 25);
+        panel.add(withdrawButton);
+
+        JLabel statusLabel = new JLabel("");
+        statusLabel.setBounds(10, 110, 300, 25);
+        panel.add(statusLabel);
+
+        displayBalanceButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                statusLabel.setText("Current balance: " + currentUser.getAccount().getBalance());
             }
+        });
+
+        depositButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String amountStr = JOptionPane.showInputDialog("Enter amount to deposit:");
+                double amount = Double.parseDouble(amountStr);
+                bankingSystem.performTransaction(currentUser, amount, true);
+                statusLabel.setText("Deposited: " + amount);
+            }
+        });
+
+        withdrawButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String amountStr = JOptionPane.showInputDialog("Enter amount to withdraw:");
+                double amount = Double.parseDouble(amountStr);
+                bankingSystem.performTransaction(currentUser, amount, false);
+                statusLabel.setText("Withdrew: " + amount);
+            }
+        });
+
+        if (currentUser instanceof VIPUser) {
+            JButton viewBenefitsButton = new JButton("View Special Benefits");
+            viewBenefitsButton.setBounds(10, 140, 150, 25);
+            panel.add(viewBenefitsButton);
+
+            JButton calculateInterestButton = new JButton("Calculate Interest");
+            calculateInterestButton.setBounds(10, 170, 150, 25);
+            panel.add(calculateInterestButton);
+
+            viewBenefitsButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    ((VIPUser) currentUser).getSpecialBenefits();
+                    statusLabel.setText("Special benefits displayed in console.");
+                }
+            });
+
+            calculateInterestButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    double interest = ((VIPUser) currentUser).calculateInterest();
+                    statusLabel.setText("Calculated interest: " + interest);
+                }
+            });
         }
+
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBounds(10, 200, 150, 25);
+        panel.add(logoutButton);
+
+        logoutButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                currentUser = null;
+                ((JFrame) SwingUtilities.getWindowAncestor(panel)).dispose();
+                showLoginGUI();
+            }
+        });
     }
 }
