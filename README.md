@@ -193,7 +193,7 @@ Be detailed about what you are testing and how you argue for your test cases.
 Test cases usually cover the following areas:
 * boundary cases
 * normal cases
-* error cases / catching exceptions 
+* error cases / catching exceptions : https://github.com/yasipd/projects/blob/main/Multithreading/MultiThreading.java
 
 
 * I didn't use Junit but I tested Manually my Project from the book head first I learned how I can benefits from TDD (and now this is my way to writing code because it really helped me to think how I should structure my program):test driven development so I tried to first write the test(Main) for specific functionality and then I wrote the classes 
@@ -214,6 +214,7 @@ try {
             System.out.println(e.getMessage());
         }
 but unfortunately I forgot to update my Bank on vsCode... but the class for InsufficientFundsException is already there...
+but i use exceptional handling here :https://github.com/yasipd/projects/blob/main/Multithreading/MultiThreading.java
  *
 
 | Total Achievable Points | Points Reached During Grading |
