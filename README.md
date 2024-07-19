@@ -321,6 +321,18 @@ Please explain the concept of lambda expressions and provide an example of how y
 a functional interface is an interface with exactly one abstract method. It can have multiple default or static methods. Lambda expressions are used to implement the single abstract method of a functional interface.
 In the Main class, a lambda expression is used to implement the myMethod of the MyInterface.
 The lambda expression takes two parameters (x and y), which represent the name and symbol respectively, and prints a greeting message.
+public class Main {
+    public static void main(String[] args) {
+        String name="paria";
+        char symbol='!';
+        MyInteface myInteface=(x,y)->{
+            System.out.println("hello "+x+y);
+            
+    };
+        myInteface.myMethod(name,symbol);
+    }
+
+    }
 *
 
 | Total Achievable Points | Points Reached During Grading |
