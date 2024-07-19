@@ -65,11 +65,11 @@ Algorithms are manyfold and Java can be used to program these. Examples are sort
 
 so % exercises I have done for algorithm.
 
-*https://github.com/yasipd/projects/tree/main/Algorithm
+* https://github.com/yasipd/projects/tree/main/Algorithm
 
 in this folder you can find 4 programs about Sorting and Searching
 
-also in this one i did bubblesort : https://github.com/yasipd/projects/tree/main/learnJava5*
+also in this one i did bubblesort : https://github.com/yasipd/projects/tree/main/learnJava5 *
 
 
 | Total Achievable Points | Points Reached During Grading |
@@ -88,7 +88,7 @@ Typical data types in java are int, double, float, char, boolean, long, short, b
 
 Regarding the link to your project, explain the context in which you have used this data type being specific to your project. 
 
-*https://github.com/yasipd/projects/blob/main/Project/User.java: in the User class of my project strings are used to storing the username and password of the user and the username and password are string type and the 2 other links above rather than my project referrig that i completed this context of data types.*
+* https://github.com/yasipd/projects/blob/main/Project/User.java: in the User class of my project strings are used to storing the username and password of the user and the username and password are string type and the 2 other links above rather than my project referrig that i completed this context of data types.*
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -102,11 +102,11 @@ Regarding the link to your project, explain the context in which you have used t
 
 Examples of complex data structures in Java are ArrayList, HashMap, HashSet, LinkedList, and TreeMap. Please provide an example of how you have used **two** of these complex data structures in your code and explain why you have chosen these data structures. Examples do not have to come from the project.
 
-*in my coding practice i used complex data structure tbh almost everywhere. but i will provide 2 examples ArrayList and HashMap
+* in my coding practice i used complex data structure tbh almost everywhere. but i will provide 2 examples ArrayList and HashMap
 ArrayList :https://github.com/yasipd/projects/blob/main/learnJava7/ArrayListExample.java
 ArrayList is resizeable array that implement list interface and it stores dynamically sized I mean it is resizeable 
 HashMap: https://github.com/yasipd/projects/blob/main/Project/BankingSystem.java
-this is from my project that hashmap is a javacollection framework and i use it to store key-value pairs and mapping usernames to user object.*
+this is from my project that hashmap is a javacollection framework and i use it to store key-value pairs and mapping usernames to user object. *
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
@@ -123,7 +123,7 @@ Explain HOW and WHY your **project** demonstrates the use of OOP by using all of
 * Attributes : https://github.com/yasipd/projects/blob/main/Project/User.java
 Link to the code in your project that demonstrates what you have explained above.
 
-*i mentioned a one class of my project for all 3: in my project the User class is blueprint for creating user objects. my user class has attributes(it's like properties for my class):username,password,and bank account .https://github.com/yasipd/projects/blob/main/Project/User.java
+* I mentioned a one class of my project for all 3: in my project the User class is blueprint for creating user objects. my user class has attributes(it's like properties for my class):username,password,and bank account .https://github.com/yasipd/projects/blob/main/Project/User.java
 and with this method i mean OOP you can encapsulate the data and methods.
 methods are like defining a behaviour and actions that our object can do (functionality)
 the user class is also  having checkpassword and getaccount methods to check the users data object and control it 
@@ -141,7 +141,7 @@ the user class is also  having checkpassword and getaccount methods to check the
 Please showcase **two** areas **where** you have used object orientation in your project. (How and why you use it will be the next question below.)
 Examples in Java of good oo design are composition, encapsulation, inheritance, polymorphism, and abstraction. 
 
-* in my project i used object oriented design below i mentioned 2 areas that it'S been applied:
+* In my project i used object oriented design below i mentioned 2 areas that it'S been applied:
 https://github.com/yasipd/projects/blob/main/Project/VIPUser.java
 here i used inheritance to create new class VIPUser that is based on User class that I have so it inherits fields and methods from the existing class and polymorphism is demonstraded within method overriding where the VIPUser can have additional behavior that extends the behavior of User class
 
@@ -167,7 +167,7 @@ withdraw:abstract method
 ### Advanced Class Concepts
 Advanced class concepts include constructors, abstract classes, interfaces, access modifiers, static methods, and variables. Please provide an example of how you have used **two** of these class concepts in your **project** code and explain why you have chosen these class concepts and how they work within your code.
 
-*I think I explained it all above :D sorryy..
+* I think I explained it all above :D sorryy..
 Abstract classes are classes that cannot be instantiated on their own and are meant to be subclassed. They can include abstract methods (without implementations)
 In my project: the AbstractBank class is an abstract class that provides a common structure for different types of bank accounts. it includes both abstract methods and concrete methods.
 https://github.com/yasipd/projects/blob/main/Project/AbstractBank.java
@@ -196,7 +196,7 @@ Test cases usually cover the following areas:
 * error cases / catching exceptions 
 
 
-*I didn't use Junit but I tested Manually my Project from the book head first I learned how I can benefits from TDD (and now this is my way to writing code because it really helped me to think how I should structure my program):test driven development so I tried to first write the test(Main) for specific functionality and then I wrote the classes 
+* I didn't use Junit but I tested Manually my Project from the book head first I learned how I can benefits from TDD (and now this is my way to writing code because it really helped me to think how I should structure my program):test driven development so I tried to first write the test(Main) for specific functionality and then I wrote the classes 
 and again refactor the code to improves its structure
 for Exception Handling:
 https://github.com/yasipd/projects/blob/main/Project/InsufficientFundsException.java
