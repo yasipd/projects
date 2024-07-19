@@ -358,12 +358,12 @@ Serialization is the process of converting an object into a stream of bytes to s
 Web applications use databases to store data. Please explain how you have connected to a database in your project and provide an example of how you have used database connectivity in your code. The link does not have to be to your project and can be to your practice code. Do not use code from other classes, like database programming, Web Engineering, or theoretical informatics.
 This topic appeared in your learning agreement as the last point in the table under advanced topics.
 
-*for the connectivity we typically use JDBC. it is an api that allows java application to interact with database but i didn't use that in my project I know how :
+* for the connectivity we typically use JDBC. it is an api that allows java application to interact with database but i didn't use that in my project I know how :
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
  and then implementing a class like databaseconnection and implementing attributes like : private static final String PASSWORD = "password1";
- I know the concept but I didn't over it in my project.*
+ I know the concept but I didn't cover it in my project. *
 
 | Total Achievable Points | Points Reached During Grading |
 |------------------------|-------------------------------|
